@@ -2,36 +2,36 @@
 
 Personal Claude Code plugin marketplace for streamlined PR workflows and code quality management.
 
-## Installation
+### Installation
 
 ```bash
 /plugin marketplace add HikaruEgashira/hikae-claude-code-marketplace
 /plugin install wf
 ```
 
-## Usage Examples
+### Usage Examples
 
-### Create a PR with code review
+#### Create a PR with code review
 ```bash
 /pr
 ```
 
-### Review an existing PR
+#### Review an existing PR
 ```bash
 /review-pr <PR_URL>
 ```
 
-### Split changes into meaningful commits
+#### Split changes into meaningful commits
 ```bash
 /commit
 ```
 
-### Monitor PR until mergeable
+#### Monitor PR until mergeable
 ```bash
 /watch-pr <PR_URL>
 ```
 
-## Shell Function Shortcuts
+### Shell Function Shortcuts
 
 Add these convenient shell functions to your `.zshrc` or `.bashrc` for quick access to common commands:
 
