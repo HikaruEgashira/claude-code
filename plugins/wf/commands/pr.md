@@ -1,6 +1,6 @@
 ---
 name: pr
-description: Creates pull requests with full CI validation and code review. Creates branch and PR following template in Japanese, monitors CI, and performs automated code cleanup and review. Use when ready to propose changes and need comprehensive PR workflow with validation.
+description: PR作成からCIとレビューまで
 model: haiku
 disable-model-invocation: true
 ---

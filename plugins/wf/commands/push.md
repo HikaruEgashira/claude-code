@@ -1,6 +1,6 @@
 ---
 name: push
-description: just push
+description: pushする
 model: haiku
 disable-model-invocation: true
 ---

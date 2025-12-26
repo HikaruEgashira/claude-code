@@ -1,5 +1,6 @@
 ---
 name: yolo
+description: 確認なしで進める
 disable-model-invocation: true
 ---
 
