@@ -1,11 +1,3 @@
 {
-  "name": "wf",
-  "version": "1.0.0",
-  "description": "Personal workflow commands and agents for PR management and code review",
-  "author": {
-    "name": "HikaruEgashira"
-  },
-  "license": "MIT",
-  "agents": "./agents/",
-  "commands": "./commands/"
+  "name": "wf"
 }
