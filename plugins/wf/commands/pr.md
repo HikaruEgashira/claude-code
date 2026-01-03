@@ -13,7 +13,7 @@ parallelで以下を進めます。
     - following pr template
     - description in japanese
     - 提出後は gh pr checks --watch で CI 成功を確認し、必要に応じて gh pr view --web で差分を共有します。
-- subagentで deslop skill を使用したコードの自動整形を行い。commit & push します。
+- subagentで deslop:deslop skill を使用したコードの自動整形を行い。commit & push します。
 - QA subagentで実際のユースケースにおける動作確認を実施して、品質を評価します。
 - subagentで review-pr skill を使用したペアプロ形式のレビューを行い結果を報告します。
 
