@@ -1,36 +1,36 @@
 ### Hikae Marketplace
 
-Personal Claude Code plugin marketplace for streamlined PR workflows and code quality management.
+#### "When to Use" over "What to Do"
 
-### Installation
+This plugin uses a unique design pattern for skills. Instead of describing **what** the skill does, we describe **when** to use it.
+
+```yaml
+# Traditional approach (What)
+description: "Create a commit with conventional format"
+
+# Our approach (When)
+description: "PRをサクッと作成。タスク完了後に実行するフロー"
+```
+
+By specifying **timing** in the description ("タスク完了後に実行" = "execute after task completion"), Claude Code can automatically suggest skills at the right moment without explicit user invocation.
+
+#### Skill Chain
+
+| Skill | When to use |
+|-------|-------------|
+| `assign` | When context is missing |
+| `commit-push-pr-flow` | After task completion |
+| `review-flow` | After PR creation |
+
+
+#### Installation
 
 ```bash
 claude plugin marketplace add HikaruEgashira/hikae-claude-code-marketplace
 claude plugin install wf
-claude plugin install architect
 ```
 
-### Examples
-
-#### Review an existing PR
-```bash
-/review <PR_URL>
-```
-
-#### Start from PR
-```bash
-/assign
-```
-
-### Shell Function Shortcuts
-
-Add these convenient shell functions to your `.zshrc` or `.bashrc` for quick access to common commands:
-
-```bash
-review() { claude "/review $1"; }
-assign() { claude "/assign $1"; }
-```
-
-## Awesome Claude Code
+#### Additional Claude Code Plugins
 
 - https://github.com/fumiya-kume/claude-code
+- ...
