@@ -19,7 +19,7 @@ claude plugin install architect
 
 #### Start from PR
 ```bash
-/current
+/assign
 ```
 
 ### Shell Function Shortcuts
@@ -28,7 +28,7 @@ Add these convenient shell functions to your `.zshrc` or `.bashrc` for quick acc
 
 ```bash
 review() { claude "/review $1"; }
-current() { claude "/current gh pr view | head -n 150 => $(gh pr view | head -n 150), gh pr diff | head -n 50 => $(gh pr diff | head -n 50) $1"; }
+assign() { claude "/assign $1"; }
 ```
 
 ## Awesome Claude Code
