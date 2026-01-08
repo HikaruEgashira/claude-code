@@ -1,3 +1,8 @@
 {
-  "name": "wf"
+  "name": "wf",
+  "version": "1.0.0",
+  "description": "Workflow automation tools for Git and GitHub operations",
+  "author": {
+    "name": "HikaruEgashira"
+  }
 }

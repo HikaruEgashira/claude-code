@@ -1,0 +1,8 @@
+{
+  "name": "architect",
+  "version": "1.0.0",
+  "description": "Architecture design and planning tools for Claude Code",
+  "author": {
+    "name": "HikaruEgashira"
+  }
+}
