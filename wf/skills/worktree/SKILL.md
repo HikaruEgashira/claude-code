@@ -1,6 +1,6 @@
 ---
 name: create-pr
-description: Git worktreeを作成します。Planが完了した後に呼び出す
+description: Git worktreeを作成します。Planが完了した後に呼び出す必要があるスキルです。
 model: haiku
 ---
 

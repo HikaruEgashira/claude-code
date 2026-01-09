@@ -1,6 +1,6 @@
 ---
 name: commit-action
-description: 変更を意味ある単位に分割コミット。逐次実行するのではなくPRを作成する時に呼び出す
+description: 変更を意味ある単位に分割コミット。逐次実行するのではなくPRを作成する時に呼び出す必要があるスキルです。
 model: haiku
 ---
 
