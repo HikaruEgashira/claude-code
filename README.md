@@ -1,4 +1,4 @@
-<p align="center"><code>npx add-skill HikaruEgashira/agent-skills</code></p>
+`npx add-skill HikaruEgashira/agent-skills`
 
 #### Skill Chain
 
