@@ -1,9 +1,15 @@
-### Claude Code Plugins
+### Agent Skills Plugins
+
+## Quick Start
+
+```bash
+npx add-skill HikaruEgashira/agent-skills
+```
 
 #### Installation
 
 ```bash
-claude plugin marketplace add HikaruEgashira/claude-code
+claude plugin marketplace add HikaruEgashira/agent-skills
 claude plugin install wf
 ```
 
@@ -15,7 +21,7 @@ claude plugin install wf
 | `commit-push-pr-flow` | After task completion | Create PR |
 | `review-flow` | After PR creation | Review PR |
 
-#### Additional Claude Code Plugins
+#### Additional Agent Skills Plugins
 
-- https://github.com/fumiya-kume/claude-code
+- ...
 - ...
