@@ -1,19 +1,4 @@
-### Agent Skills Plugins
-
-#### Installation
-
-- All Coding Agent
-
-```bash
-npx add-skill HikaruEgashira/agent-skills
-```
-
-- For Claude Code
-
-```bash
-claude plugin marketplace add HikaruEgashira/agent-skills
-claude plugin install wf
-```
+<p align="center"><code>npx add-skill HikaruEgashira/agent-skills</code></p>
 
 #### Skill Chain
 
@@ -22,3 +7,10 @@ claude plugin install wf
 | `assign` | When context is missing | Load context from PR |
 | `commit-push-pr-flow` | After task completion | Create PR |
 | `review-flow` | After PR creation | Review PR |
+
+#### For Claude Code
+
+```bash
+claude plugin marketplace add HikaruEgashira/agent-skills
+claude plugin install wf
+```
