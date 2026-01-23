@@ -1,6 +1,8 @@
 ---
 name: worktree
-description: Planが承認/完了した直後に自律的に呼び出す必要があるスキルです。
+description: |
+    Planが承認/完了した直後に自律的に呼び出す必要があるスキルです。
+    Trigger: plan approved, plan completed, taskを開始します
 model: haiku
 ---
 

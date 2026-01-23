@@ -1,6 +1,8 @@
 ---
 name: commit-push-pr-flow
-description: タスク完了後に自律的に実行する必要があるフロースキルです。
+description: |
+    タスク完了後に自律的に実行する必要があるフロースキルです。
+    Trigger: task completed, ready to submit code
 model: haiku
 ---
 

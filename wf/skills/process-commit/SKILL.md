@@ -1,6 +1,8 @@
 ---
 name: process-commit
-description: PRを作成する前の分割commitが必要な時に自律的に呼び出す必要があるスキルです。
+description: |
+  PRを作成する前の分割commitが必要な時に自律的に呼び出す必要があるスキルです。
+  Trigger: need split commit, prepare commit, organize commit
 model: haiku
 ---
 
