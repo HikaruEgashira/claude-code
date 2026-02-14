@@ -2,9 +2,9 @@
 """
 Sandbox Domain Auto-Allowlist Hook (PostToolUse / PostToolUseFailure)
 =====================================================================
-Detect proxy timeout patterns in Bash command output and extract
-blocked domains. Reports them via stderr so Claude can add them
-to settings.json allowedDomains.
+Detect proxy timeout patterns in Bash output. Extract domains from
+both the output AND the original command string. Report new domains
+via stderr so Claude can add them to allowedDomains.
 """
 
 import json
@@ -27,10 +27,10 @@ _PROXY_BLOCK_INDICATORS = [
 
 _DOMAIN_EXTRACTORS = [
     re.compile(r"CONNECT\s+([\w.-]+):\d+"),
-    re.compile(r"--\d{4}-\d{2}-\d{2}.*?https?://([\w.-]+)"),
     re.compile(r"https?://([\w.-]+)"),
     re.compile(r"Could not resolve host:\s*([\w.-]+)"),
     re.compile(r"Failed to connect to\s+([\w.-]+)"),
+    re.compile(r"git@([\w.-]+):"),
 ]
 
 _IGNORE_HOSTS = {"localhost", "127.0.0.1", "::1", "0.0.0.0"}
@@ -71,7 +71,9 @@ def main():
     if not any(ind in output for ind in _PROXY_BLOCK_INDICATORS):
         sys.exit(0)
 
-    domains = extract_domains(output)
+    # Extract from both output and original command
+    command = input_data.get("tool_input", {}).get("command", "")
+    domains = extract_domains(output) | extract_domains(command)
     if not domains:
         sys.exit(0)
 
@@ -80,10 +82,11 @@ def main():
     if new_domains:
         names = ", ".join(sorted(new_domains))
         print(
-            f"sandbox network block を検出しました。"
-            f"以下のドメインを settings.json の sandbox.network.allowedDomains に追加してください: {names}",
+            f"sandbox network block を検出。"
+            f"allowedDomains に追加してください: {names}",
             file=sys.stderr,
         )
+        sys.exit(2)
 
     sys.exit(0)
 
